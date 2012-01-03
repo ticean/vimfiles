@@ -6,8 +6,20 @@ set nocompatible
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"set theme
+set background=dark
+"colorscheme solarized
+if has('gui_running')
+  colorscheme solarized
+else
+  colorscheme desert
+end
+
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+"bind pastemode to <F2>, prevents auto-indent in insert mode
+set pastetoggle=<F2>
 
 "store lots of :cmdline history
 set history=1000
@@ -281,6 +293,9 @@ if !has("gui")
     let g:CSApprox_loaded = 1
 endif
 
+"make jj exit insert mode.
+imap jj <Esc>
+
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -290,6 +305,9 @@ noremap Q gq
 
 "make Y consistent with C and D
 nnoremap Y y$
+
+"Exit insert mode with Shift-Enter"
+imap jj <Esc>
 
 "visual search mappings
 function! s:VSetSearch()
