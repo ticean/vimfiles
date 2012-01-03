@@ -106,3 +106,7 @@
         path = bundle/unimpaired
         url = https://github.com/tpope/vim-unimpaired.git
         ignore = untracked
+[submodule "bundle/vim-chef"]
+        path = bundle/vim-chef
+        url = https://github.com/t9md/vim-chef.git
+        ignore = untracked
