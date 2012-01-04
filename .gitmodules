@@ -110,3 +110,6 @@
         path = bundle/vim-chef
         url = https://github.com/t9md/vim-chef.git
         ignore = untracked
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = https://github.com/leshill/vim-json.git
