@@ -10,7 +10,7 @@ call pathogen#helptags()
 set background=dark
 "colorscheme solarized
 if has('gui_running')
-  colorscheme twilight
+  colorscheme twilight 
 else
   colorscheme twilight
 end
