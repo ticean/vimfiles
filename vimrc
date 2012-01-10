@@ -10,9 +10,9 @@ call pathogen#helptags()
 set background=dark
 "colorscheme solarized
 if has('gui_running')
-  colorscheme solarized
+  colorscheme twilight
 else
-  colorscheme desert
+  colorscheme twilight
 end
 
 "allow backspacing over everything in insert mode
@@ -20,6 +20,10 @@ set backspace=indent,eol,start
 
 "bind pastemode to <F2>, prevents auto-indent in insert mode
 set pastetoggle=<F2>
+
+"hack a system copy/paste
+nnoremap yy yy"+yy
+vnoremap y ygv"+y
 
 "store lots of :cmdline history
 set history=1000
