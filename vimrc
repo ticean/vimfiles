@@ -8,11 +8,12 @@ call pathogen#helptags()
 
 "set theme
 set background=dark
-"colorscheme solarized
+
+"colorscheme
 if has('gui_running')
-  colorscheme twilight 
-else
   colorscheme twilight
+else
+  colorscheme desert 
 end
 
 "allow backspacing over everything in insert mode
@@ -300,6 +301,18 @@ endif
 "make jj exit insert mode.
 imap jj <Esc>
 
+"splitting
+"open a horizontal split with ,w
+nnoremap <leader>w <C-w>v<C-w>l
+"moving around window splits
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"select text that was just pasted.
+nnoremap <leader>v V`]
+
 "make <c-l> clear the highlight as well as redraw
 nnoremap <C-L> :nohls<CR><C-L>
 inoremap <C-L> <C-O>:nohls<CR>
@@ -309,9 +322,6 @@ noremap Q gq
 
 "make Y consistent with C and D
 nnoremap Y y$
-
-"Exit insert mode with Shift-Enter"
-imap jj <Esc>
 
 "visual search mappings
 function! s:VSetSearch()
