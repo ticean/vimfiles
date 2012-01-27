@@ -2,18 +2,20 @@
 "This must be first, because it changes other options as a side effect.
 set nocompatible
 
+
 "activate pathogen
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 "set theme
-set background=dark
+"set background=dark
 
 "colorscheme
 if has('gui_running')
   colorscheme twilight
+  set guifont=Courier\ New\ 11
 else
-  colorscheme desert 
+  colorscheme desert
 end
 
 "allow backspacing over everything in insert mode
@@ -54,8 +56,8 @@ if v:version >= 703
 endif
 
 "default indent settings
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set autoindent
 
